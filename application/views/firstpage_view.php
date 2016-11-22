@@ -11,26 +11,20 @@
 
     <title>mDex mHealth</title>
 
-    <!-- Bootstrap Core CSS -->
-	<link rel="stylesheet" href="<?php echo base_url("assets/agency/vendor/bootstrap/css/bootstrap.min.css"); ?>">
-
-    <!-- Custom Fonts -->
+	  <link rel="stylesheet" href="<?php echo base_url("assets/agency/vendor/bootstrap/css/bootstrap.min.css"); ?>">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+	  <link rel="stylesheet" href="<?php echo base_url("assets/agency/css/agency.min.css"); ?>">
 
-    <!-- Theme CSS -->
-	<link rel="stylesheet" href="<?php echo base_url("assets/agency/css/agency.min.css"); ?>">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    <style type="text/css">
+      @font-face {
+        font-family: Akrobat;
+        src: url('assets/fonts/akrobat/Akrobat-ExtraBold.otf');
+      }
+    </style>
 </head>
 
 <body id="page-top" class="index">
@@ -79,10 +73,10 @@
     </nav>
 
     <!-- Header -->
-    <header>
+    <header style="background-image: url(assets/agency/img/header.jpg)">
         <div class="container">
             <div class="intro-text">
-            	<div class="intro-heading" style="color: #edeff2; background-color:rgba(43,50,42,0.6); border-style: none;">MDex mHealth</div>
+            	<div class="intro-heading" style="color:rgb(223,112,0); border-style: none; font-family:Akrobat; font-size: 130px;">MDex mHealth</div>
                 <!--<div class="intro-lead-in">Welcome!</div>-->
                 <a href="#services" class="page-scroll btn btn-xl" style="background-color:#B15C71; border-color:#B15C71;">Let's Get Started!</a>
             </div>
@@ -700,7 +694,7 @@
 */ ?>
 
  	<script type="text/javascript">
-		//1st member       
+		//1st member
         document.getElementById("fb_gonzales").onclick = function () {
           location.href = "https://www.facebook.com/JeepGonzales";
         };
@@ -713,7 +707,7 @@
           location.href = "http://instagram.com/";
         };
 
-        //2nd member       
+        //2nd member
         document.getElementById("fb_oribiana").onclick = function () {
           location.href = "https://www.facebook.com/denzzeeel";
         };
@@ -726,7 +720,7 @@
           location.href = "http://instagram.com/";
         };
 
- 		//3rd member       
+ 		//3rd member
         document.getElementById("fb_ruiz").onclick = function () {
           location.href = "https://www.facebook.com/angelicalaurene";
         };
@@ -739,7 +733,7 @@
           location.href = "http://instagram.com/angelicalaurene";
         };
 
-         //4th member       
+         //4th member
         document.getElementById("fb_serrano").onclick = function () {
           location.href = "https://www.facebook.com/profile.php?id=1494507430";
         };
@@ -752,7 +746,7 @@
           location.href = "http://instagram.com/mauserrano_";
         };
 
-         //5th member       
+         //5th member
         document.getElementById("fb_tison").onclick = function () {
           location.href = "https://www.facebook.com/FonsTison";
         };
@@ -778,7 +772,7 @@
     <!-- Contact Form JavaScript -->
     <script src= "<?php echo base_url("assets/agency/js/jqBootstrapValidation.js")?>"></script>
     <script src= "<?php echo base_url("assets/agency/js/contact_me.js")?>"></script>
-   
+
 
     <!-- Theme JavaScript -->
     <script src= "<?php echo base_url("assets/agency/js/agency.min.js")?>"></script>

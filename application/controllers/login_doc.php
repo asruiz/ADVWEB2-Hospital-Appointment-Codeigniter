@@ -10,7 +10,7 @@ class login_doc extends CI_Controller
         $this->load->model('doctor_model');
 
     }
-    
+
     function index()
     {
         // get form input
@@ -39,7 +39,7 @@ class login_doc extends CI_Controller
             }
             else
             {
-                $this->session->set_flashdata('msg', '<div class="alert alert-danger text-center">Wrong Email-ID or Password!</div>');
+                $this->session->set_flashdata('msg1', '<div class="alert alert-danger text-center">Wrong Email-ID or Password!</div>');
                 redirect('index.php/login_doc');
             }
         }

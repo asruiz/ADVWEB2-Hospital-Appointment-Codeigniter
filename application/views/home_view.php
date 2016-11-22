@@ -21,7 +21,7 @@
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="<?php echo base_url("assets/agency/css/agency.min.css"); ?>">
-    
+
     <style type="text/css">
         @font-face {
             font-family: Beba;
@@ -65,8 +65,8 @@
                     <li>
                 <?php if ($this->session->userdata('login')){ ?>
                 <li><a>Hello <?php echo $this->session->userdata('uname'); ?></a></li>
-                <li><a href="<?php echo base_url(); ?>index.php/profile">Profile</a></li>                
-                <li><a href="<?php echo base_url(); ?>index.php/home/logout">Log Out</a></li>          
+                <li><a href="<?php echo base_url(); ?>index.php/profile">Profile</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/home/logout">Log Out</a></li>
                 <?php } ?>
                     </li>
                 </ul>
@@ -82,7 +82,7 @@
         <!-- Portfolio Item Heading -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Mdex Mhealth 
+                <h1 class="page-header">Mdex Mhealth
                     <small>For Patients</small>
                 </h1>
             </div>
@@ -122,12 +122,12 @@
                             <div class="carousel-caption">
                             </div>
                         </div>
-                        <div class="item">
-                            <!-- Set the third background image using inline CSS below. -->
+                        <!--<div class="item">
+                            Set the third background image using inline CSS below. 
                             <div class="fill" style="background-image:url('../assets/portfolio/images/4.jpeg');"></div>
                             <div class="carousel-caption">
                             </div>
-                        </div>
+                        </div>-->
                     </div>
 
                     <!-- Controls -->
@@ -138,7 +138,7 @@
                         <span class="icon-next"></span>
                     </a>
 
-                </header>            
+                </header>
             </div>
 
             <div class="col-md-4" style="background-color: rgba(0,0,0,0.4); color: white;">
@@ -172,7 +172,7 @@
                 <h3 class="page-header">Locations</h3>
                 <h4>Metro Manila</h4>
             </div>
-            
+
             <div class="col-sm-3 col-xs-6 bg">
                 <a href="<?php echo base_url ('index.php/showdoc/show'); ?>">
                     <h2>City of Manila</h2>
@@ -286,27 +286,14 @@
     </div>
     <!-- /.container -->
 
-    <!-- jQuery -->
+
     <script src="<?php echo base_url("assets/portfolio/js/jquery.js")?>"></script>
-
-    <!-- Bootstrap Core JavaScript -->
     <script  src="<?php echo base_url("assets/portfolio/js/bootstrap.min.js")?>"></script>
-
-     <!-- jQuery -->
     <script src= "<?php echo base_url("assets/agency/vendor/jquery/jquery.min.js")?>"></script>
-
-    <!-- Bootstrap Core JavaScript -->
     <script src= "<?php echo base_url("assets/agency/vendor/bootstrap/js/bootstrap.min.js")?>"></script>
-
-    <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-    <!-- Contact Form JavaScript -->
     <script src= "<?php echo base_url("assets/agency/js/jqBootstrapValidation.js")?>"></script>
     <script src= "<?php echo base_url("assets/agency/js/contact_me.js")?>"></script>
-   
-
-    <!-- Theme JavaScript -->
     <script src= "<?php echo base_url("assets/agency/js/agency.min.js")?>"></script>
 </body>
 

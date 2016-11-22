@@ -61,7 +61,7 @@ background-repeat: no-repeat;"">
                     <li>
                 <?php if ($this->session->userdata('login_doc')){ ?>
                 <li><a>Hello <?php echo $this->session->userdata('uname'); ?></a></li>
-                <li><a href="<?php echo base_url(); ?>index.php/profile">Profile</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/profile_doc">Profile</a></li>
 
                 <li><a href="<?php echo base_url(); ?>index.php/home/logout">Log Out</a></li>
 
@@ -71,7 +71,7 @@ background-repeat: no-repeat;"">
                 <li><a href="<?php echo base_url(); ?>index.php/signup">Signup</a></li></li>
                 <li><a style="color:black;">Doctor |</a></li>
                 <li><a href="<?php echo base_url(); ?>index.php/login_doc">Login</a></li>
-                <li><a href="<?php echo base_url(); ?>index.php/signup_doc">Signup</a></li>             
+                <li><a href="<?php echo base_url(); ?>index.php/signup_doc">Signup</a></li>
                 <?php } ?>
                     </li>
                 </ul>
@@ -87,7 +87,7 @@ background-repeat: no-repeat;"">
         <!-- Portfolio Item Heading -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Mdex Mhealth 
+                <h1 class="page-header">Mdex Mhealth
                     <small>For Doctors</small>
                 </h1>
             </div>
@@ -143,7 +143,7 @@ background-repeat: no-repeat;"">
                         <span class="icon-next"></span>
                     </a>
 
-                </header>            
+                </header>
             </div>
 
             <div class="col-md-4" style="background-color: rgba(0,0,0,0.4); color: white;">
@@ -165,7 +165,7 @@ background-repeat: no-repeat;"">
             <div class="col-lg-12" id="loc">
                 <h3 class="page-header">Features</h3>
             </div>
-            
+
             <!--Appointments -->
             <div class="col-md-4 col-sm-6 portfolio-item">
                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
@@ -216,7 +216,7 @@ background-repeat: no-repeat;"">
         </div>
         <!-- /.row -->
 
-       
+
         <hr>
 
         <!-- Footer -->
@@ -252,7 +252,7 @@ background-repeat: no-repeat;"">
     <!-- Contact Form JavaScript -->
     <script src= "<?php echo base_url("assets/agency/js/jqBootstrapValidation.js")?>"></script>
     <script src= "<?php echo base_url("assets/agency/js/contact_me.js")?>"></script>
-   
+
     <!-- Theme JavaScript -->
     <script src= "<?php echo base_url("assets/agency/js/agency.min.js")?>"></script>
 </body>

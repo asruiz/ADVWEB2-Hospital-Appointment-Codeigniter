@@ -27,7 +27,7 @@ class signup extends CI_Controller
         if ($this->form_validation->run() == FALSE)
         {
             // fails
-            $this->load->view('signup_view');
+            $this->load->view('login_view');
         }
         else
         {
@@ -41,13 +41,13 @@ class signup extends CI_Controller
 
             if ($this->user_model->insert_user($data))
             {
-                $this->session->set_flashdata('msg','<div class="alert alert-success text-center">You are Successfully Registered! Please login to access your Profile!</div>');
+                $this->session->set_flashdata('msg1','<div class="alert alert-success text-center">You are Successfully Registered! Please login to access your Profile!</div>');
                 redirect('index.php/signup');
             }
             else
             {
                 // error
-                $this->session->set_flashdata('msg','<div class="alert alert-danger text-center">Oops! Error.  Please try again later!!!</div>');
+                $this->session->set_flashdata('msg1','<div class="alert alert-danger text-center">Oops! Error.  Please try again later!!!</div>');
                 redirect('index.php/signup');
             }
         }

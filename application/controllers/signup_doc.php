@@ -13,7 +13,7 @@ class signup_doc extends CI_Controller
     function hashpassword($password) {
         return md5($password);
     }
- 
+
     function index()
     {
         // set form validation rules
@@ -34,7 +34,7 @@ class signup_doc extends CI_Controller
         if ($this->form_validation->run() == FALSE)
         {
             // fails
-            $this->load->view('signup_view_doc');
+            $this->load->view('login_view_doc');
         }
         else
         {

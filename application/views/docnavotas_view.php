@@ -70,6 +70,8 @@
                 </h1>
             </div>
         </div>
+                <input type="submit" class="form-control" value="Schedule an appointment" style="width:200px;" /><br/>
+
         <!-- Related Projects Row -->
         <div class="row table-responsive"" style="background-color: rgba(255,255,255,0.4); ">
                <div class="scrollingTable">
@@ -81,7 +83,6 @@
                        <th>Specialization</th>
                        <th>Facility</th>
                        <th>Schedule</th>
-                       <th>Action</th>
                     </thead>
                     <tbody>
                     <?php  
@@ -94,10 +95,7 @@
                         <td><?php echo $row->specialization;?></td>  
                         <td><?php echo $row->facility;?></td> 
                         <td><?php echo $row->day;?> || <?php echo $row->fromtime;?> - <?php echo $row->totime;?></td>  
-                        <td>
-                        <a href="<?php echo base_url(); ?>index.php/view" style="color:maroon;">[View]</a>
-                        <a href="<?php echo base_url(); ?>index.php/book" style="color:maroon;">[Book]</a>
-                        </td>
+                     
                         </tr>  
                      <?php } ?> 
                      </tbody>

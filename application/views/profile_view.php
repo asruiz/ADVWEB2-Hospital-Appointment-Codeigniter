@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Patient | Profile</title>
+	<title>Doctor | Profile</title>
 	<link href="<?php echo base_url("assets/css/bootstrap.css"); ?>" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.css"); ?>">
 	<link rel="stylesheet" href="<?php echo base_url("assets/agency/css/agency.min.css"); ?>">

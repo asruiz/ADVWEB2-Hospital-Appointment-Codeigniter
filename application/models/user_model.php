@@ -7,6 +7,16 @@ class user_model extends CI_Model
         parent::__construct();
     }
 
+	function getAllDoctors() {
+		$query = $this->db->query("SELECT fname,lname,specialization FROM doctor WHERE location='Manila'");
+		return $query->result();
+	}
+
+	function form_insert($data){
+	// Inserting in Table(students) of Database(college)
+	return $this->db->insert('students', $data);
+	}
+
 	function get_user($email, $pwd)
 	{
 		$this->db->where('email', $email);
@@ -29,11 +39,19 @@ class user_model extends CI_Model
 		return $this->db->insert('user', $data);
 	}
 
+	//update_user
+	function update_user($data)
+    {
+		return $this->db->update('user', $data);
+	}
+
+
     // ANOTHER //
 	public function select() {
         //data is retrive from this query
         $this->db->select('fname, lname, email, location, specialization, facility, day, fromtime, totime');
         $this->db->where("location='Manila'");
+				$this->db->order_by('specialization', "asc");
         $query = $this->db->get('doctor');
         return $query;
     }

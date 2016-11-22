@@ -43,7 +43,7 @@
                   <li>
                    <?php if ($this->session->userdata('login')){ ?>
                    <li><a>Hello <?php echo $this->session->userdata('uname'); ?></a></li>
-                   <li><a href="<?php echo base_url(); ?>index.php/homie">Profile</a></li>                
+                   <li><a href="<?php echo base_url(); ?>index.php/homie">Profile</a></li>
                    <li><a href="<?php echo base_url(); ?>index.php/home/logout">Log Out</a></li>
                    <?php } else { ?>
                    <li ><a style="color:black;">Patient |</a></li>
@@ -51,7 +51,7 @@
                    <li><a href="<?php echo base_url(); ?>index.php/signup">Signup</a></li></li>
                    <li><a style="color:black;">Doctor |</a></li>
                    <li><a href="<?php echo base_url(); ?>index.php/login_doc">Login</a></li>
-                   <li><a href="<?php echo base_url(); ?>index.php/signup_doc">Signup</a></li>             
+                   <li><a href="<?php echo base_url(); ?>index.php/signup_doc">Signup</a></li>
                    <?php } ?>
                     </li>
                 </ul>
@@ -65,11 +65,13 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">DOCTORS 
+                <h1 class="page-header">DOCTORS
                     <small>Caloocan</small>
                 </h1>
             </div>
         </div>
+                <input type="submit" class="form-control" value="Schedule an appointment" style="width:200px;" /><br/>
+
         <!-- Related Projects Row -->
         <div class="row table-responsive"" style="background-color: rgba(255,255,255,0.4); ">
                <div class="scrollingTable">
@@ -81,25 +83,21 @@
                        <th>Specialization</th>
                        <th>Facility</th>
                        <th>Schedule</th>
-                       <th>Action</th>
                     </thead>
                     <tbody>
-                    <?php  
-                     foreach ($h->result() as $row)  
-                     {  
-                        ?><tr>  
-                        <td><?php echo $row->fname;?></td>  
-                        <td><?php echo $row->lname;?></td>  
-                        <td><?php echo $row->email;?></td> 
-                        <td><?php echo $row->specialization;?></td>  
-                        <td><?php echo $row->facility;?></td> 
-                        <td><?php echo $row->day;?> || <?php echo $row->fromtime;?> - <?php echo $row->totime;?></td>  
-                        <td>
-                        <a href="<?php echo base_url(); ?>index.php/view" style="color:maroon;">[View]</a>
-                        <a href="<?php echo base_url(); ?>index.php/book" style="color:maroon;">[Book]</a>
-                        </td>
-                        </tr>  
-                     <?php } ?> 
+                    <?php
+                     foreach ($h->result() as $row)
+                     {
+                        ?><tr>
+                        <td><?php echo $row->fname;?></td>
+                        <td><?php echo $row->lname;?></td>
+                        <td><?php echo $row->email;?></td>
+                        <td><?php echo $row->specialization;?></td>
+                        <td><?php echo $row->facility;?></td>
+                        <td><?php echo $row->day;?> || <?php echo $row->fromtime;?> - <?php echo $row->totime;?></td>
+                    
+                        </tr>
+                     <?php } ?>
                      </tbody>
                  </table>
                </div>
@@ -149,7 +147,7 @@
     <!-- Contact Form JavaScript -->
     <script src= "<?php echo base_url("assets/agency/js/jqBootstrapValidation.js")?>"></script>
     <script src= "<?php echo base_url("assets/agency/js/contact_me.js")?>"></script>
-   
+
 
     <!-- Theme JavaScript -->
     <script src= "<?php echo base_url("assets/agency/js/agency.min.js")?>"></script>

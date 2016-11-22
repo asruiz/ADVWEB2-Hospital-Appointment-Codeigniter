@@ -93,7 +93,7 @@
  		.btn-xl.active,.btn-xl:active,.btn-xl:focus,.btn-xl:hover,.open .dropdown-toggle.btn-xl{color:#fff;background-color:#fec503;border-color:#f6bf01}.btn-xl.disabled,.btn-xl.disabled.active,.btn-xl.disabled:active,.btn-xl.disabled:focus,.btn-xl.disabled:hover,.btn-xl[disabled],.btn-xl[disabled].active,.btn-xl[disabled]:active,.btn-xl[disabled]:focus,.btn-xl[disabled]:hover,fieldset[disabled] .btn-xl,fieldset[disabled] .btn-xl.active,fieldset[disabled] .btn-xl:active,fieldset[disabled] .btn-xl:focus,fieldset[disabled] .btn-xl:hover{background-color:#fed136;border-color:#fed136}.btn-xl .badge{color:#fed136;background-color:#fff}.navbar-custom{background-color:#222;border-color:transparent}.navbar-custom .navbar-brand{color:#fed136;font-family:"Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive}.navbar-custom .navbar-brand.active,.navbar-custom .navbar-brand:active,.navbar-custom .navbar-brand:focus,.navbar-custom .navbar-brand:hover{color:#fec503}.navbar-custom .nav li a,.navbar-custom .navbar-toggle{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;color:#fff;text-transform:uppercase}.navbar-custom .navbar-collapse{border-color:rgba(255,255,255,.02)}.navbar-custom .navbar-toggle{background-color:#fed136;border-color:#fed136;font-size:12px}.navbar-custom .navbar-toggle:focus,.navbar-custom .navbar-toggle:hover{background-color:#fed136}.navbar-custom .nav li a{font-weight:400;letter-spacing:1px}.navbar-custom .nav li a:focus,.navbar-custom .nav li a:hover{color:#fed136;outline:0}.navbar-custom .navbar-nav>.active>a{border-radius:0;color:#fff;background-color:#fed136}.navbar-custom .navbar-nav>.active>a:focus,.navbar-custom .navbar-nav>.active>a:hover{color:#fff;background-color:#fec503}@media (min-width:768px){.navbar-custom{background-color:transparent;padding:25px 0;-webkit-transition:padding .3s;-moz-transition:padding .3s;transition:padding .3s;border:none}.navbar-custom .navbar-brand{font-size:2em;-webkit-transition:all .3s;-moz-transition:all .3s;transition:all .3s}.navbar-custom .navbar-nav>.active>a{border-radius:3px}.navbar-custom.affix{background-color:#222;padding:10px 0}.navbar-custom.affix .navbar-brand{font-size:1.5em}}
 
  	header{
- 		background-image:url(../img/header.jpg);
+ 		/*background-image:url(../img/header.jpg);*/
  		background-repeat:no-repeat;
  		background-attachment:scroll;
  		background-position:center center;
@@ -125,7 +125,7 @@
  			line-height:50px;
  			margin-bottom:25px;
  		}
- 		
+
  		@media (min-width:768px) {
  			header .intro-text{
  				padding-top:300px;
