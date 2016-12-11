@@ -1,50 +1,98 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Patient | Schedule appointment</title>
-	<link href="<?php echo base_url("assets/css/bootstrap.css"); ?>" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.css"); ?>">
-	<link rel="stylesheet" href="<?php echo base_url("assets/agency/css/agency.min.css"); ?>">
+<body style="background-image: url('../assets/images/background.jpg');">
+	<div id="evencal">
+		<div class="calendar">
+			<?php echo $notes?>
+			<strong>MDex MHealth</strong>
+		</div>
+		<div class="event_detail">
+			<h2 class="s_date">Doctor Appointment Schedules for <?php echo "$day $month $year";?></h2>
+			<div class="detail_event">
+				<?php
+					if(isset($events)){
+						$i = 1;
+						foreach($events as $e){
+						 if($i % 2 == 0){
+								echo '<div class="info1"><h4>'.$e['time'].'<img src="'.base_url().'css/images/delete.png" class="delete" alt="" title="delete this event" day="'.$day.'" val="'.$e['id'].'" /></h4><p>'.$e['event'].'</p></div>';
+							}else{
+								echo '<div class="info2"><h4>'.$e['time'].'<img src="'.base_url().'css/images/delete.png" class="delete" alt="" title="delete this event" day="'.$day.'" val="'.$e['id'].'" /></h4><p>'.$e['event'].'</p></div>';
+							}
+							$i++;
+						}
+					}else{
+						echo '<div class="message"><h4>No Event</h4><p>There\'s no event in this date</p></div>';
+					}
+				?>
+				<input type="button" name="add" value="Add Event" val="<?php echo $day;?>" class="add_event"/>
+			</div>
+		</div>
+	</div>
 
-	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-</head>
-<body style="background-color:turquoise; background-size: 100% 100%; background-attachment: fixed;
-background-repeat: no-repeat;">
+	<script type="text/javascript" src="<?php echo base_url("assets/js/jquery-1.7.2.min.js")?>"></script>
+	<script type="text/javascript" src="<?php echo base_url("assets/js/jquery.colorbox-min.js")?>"></script>
 
-<nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="<?php echo base_url(); ?>index.php/home" style="margin-left: 45px;">Mdex</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="background-color:rgba(43,50,42,0.4);">
-                <ul class="nav navbar-nav navbar-right" style="margin-right: 45px;">
-                   <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-										<li>
-	                   <?php if ($this->session->userdata('login')){ ?>
-	                   <li><a>Hello <?php echo $this->session->userdata('uname'); ?></a></li>
-	                   <li><a href="<?php echo base_url(); ?>index.php/profile">Profile</a></li>
-	                   <li><a href="<?php echo base_url(); ?>index.php/home/logout">Log Out</a></li>
-	                   <?php } ?>
-	                  </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
+	<script>
+		$(".detail").live('click',function(){
+			$(".s_date").html("Doctor Appointment Schedules for "+$(this).attr('val')+" <?php echo "$month $year";?>");
+			var day = $(this).attr('val');
+			var add = '<input type="button" name="add" value="Add Event" val="'+day+'" class="add_event"/>';
+			$.ajax({
+				type: 'post',
+				dataType: 'json',
+				url: "<?php echo site_url("index.php/evencal/detail_event");?>",
+				data:{<?php echo "year: $year, mon: $mon";?>, day: day},
+				success: function( data ) {
+					var html = '';
+					if(data.status){
+						var i = 1;
+						$.each(data.data, function(index, value) {
+						    if(i % 2 == 0){
+								html = html+'<div class="info1"><h4>'+value.time+'<img src="<?php echo base_url();?>css/images/delete.png" class="delete" alt="" title="delete this event" day="'+day+'" val="'+value.id+'" /></h4><p>'+value.event+'</p></div>';
+							}else{
+								html = html+'<div class="info2"><h4>'+value.time+'<img src="<?php echo base_url();?>css/images/delete.png" class="delete" alt="" title="delete this event" day="'+day+'" val="'+value.id+'" /></h4><p>'+value.event+'</p></div>';
+							}
+							i++;
+						});
+					}else{
+						html = '<div class="message"><h4>'+data.title_msg+'</h4><p>'+data.msg+'</p></div>';
+					}
+					html = html+add;
+					$( ".detail_event" ).fadeOut("slow").fadeIn("slow").html(html);
+				}
+			});
+		});
+		$(".delete").live("click", function() {
+			if(confirm('Are you sure delete this event ?')){
+				var deleted = $(this).parent().parent();
+				var day =  $(this).attr('day');
+				var add = '<input type="button" name="add" value="Add Event" val="'+day+'" class="add_event"/>';
+				$.ajax({
+					type: 'POST',
+					dataType: 'json',
+					url: "<?php echo site_url("index.php/evencal/delete_event");?>",
+					data:{<?php echo "year: $year, mon: $mon";?>, day: day,del: $(this).attr('val')},
+					success: function(data) {
+						if(data.status){
+							if(data.row > 0){
+								$('.d'+day).html(data.row);
+							}else{
+								$('.d'+day).html('');
+								$( ".detail_event" ).fadeOut("slow").fadeIn("slow").html('<div class="message"><h4>'+data.title_msg+'</h4><p>'+data.msg+'</p></div>'+add);
+							}
+							deleted.remove();
+						}else{
+							alert('an error for deleting event');
+						}
+					}
+				});
+			}
+		});
+		$(".add_event").live('click', function(){
+			$.colorbox({
+					overlayClose: false,
+					href: '<?php echo site_url('index.php/evencal/add_event');?>',
+					data:{year:<?php echo $year;?>,mon:<?php echo $mon;?>, day: $(this).attr('val')}
+			});
+		});
+</script>
 </body>
 </html>

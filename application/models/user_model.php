@@ -12,10 +12,7 @@ class user_model extends CI_Model
 		return $query->result();
 	}
 
-	function form_insert($data){
-	// Inserting in Table(students) of Database(college)
-	return $this->db->insert('students', $data);
-	}
+
 
 	function get_user($email, $pwd)
 	{
