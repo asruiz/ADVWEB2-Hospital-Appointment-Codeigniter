@@ -27,14 +27,14 @@ class signup_doc extends CI_Controller
     $this->form_validation->set_rules('fromtime', 'From', 'trim|required|xss_clean');
     $this->form_validation->set_rules('totime', 'To', 'trim|required|xss_clean');
 
-    $this->form_validation->set_rules('password', 'Password', 'required|md5|trim|xss_clean');
+    $this->form_validation->set_rules('password', 'Password', 'required|md5|trim|min_length[8]|max_length[30]|xss_clean');
     $this->form_validation->set_rules('cpassword', 'Confirm Password', 'required|matches[password]|md5|trim|xss_clean');
 
     // submit
     if ($this->form_validation->run() == FALSE)
     {
       // fails
-      $this->load->view('registration_view_doc');
+      $this->load->view('register/registration_view_doc');
     }
     else
     {

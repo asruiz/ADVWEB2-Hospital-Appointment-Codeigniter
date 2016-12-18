@@ -4,12 +4,11 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">DOCTORS
-                    <small>San Juan</small>
+                    <small>Valenzuela</small>
                 </h1>
             </div>
         </div>
-                <input type="submit" class="form-control" value="Schedule an appointment" style="width:200px;" /><br/>
-
+        <a href="<?php echo base_url('index.php/evencal')?>" class="form-control" style="width:200px;">Schedule an appointment</a>
         <!-- Related Projects Row -->
         <div class="row table-responsive"" style="background-color: rgba(255,255,255,0.4); ">
                <div class="scrollingTable">

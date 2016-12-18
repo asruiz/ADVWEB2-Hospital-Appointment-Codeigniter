@@ -20,10 +20,9 @@ class first extends CI_Controller {
   {
     $email = $this->input->post('email');
     $password = $this->input->post('password');
-      $this->load->view('templates/navigation_session');
+    $this->load->view('templates/navigation_session');
     $this->load->view('templates/header');
-
-    $this->load->view('home_view');
+    $this->load->view('patient/home_view');
     $this->load->view('templates/footer');
 
     $uresult = $this->user_model->get_user($email, $password);
@@ -43,7 +42,7 @@ class first extends CI_Controller {
     $password = $this->input->post('password');
     $this->load->view('templates/header');
     $this->load->view('templates/navigation_session');
-    $this->load->view('home_view_doc');
+    $this->load->view('doctor/home_view_doc');
     $this->load->view('templates/footer');
 
     $uresult = $this->doctor_model->get_user($email, $password);

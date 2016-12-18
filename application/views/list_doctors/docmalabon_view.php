@@ -1,14 +1,15 @@
 <body style="/*background-image: url('../assets/portfolio/images/background.jpg'); */ background-color: turquoise; background-size: 100% 100%; background-attachment: fixed; background-repeat: no-repeat;" onload="makeTableScroll();">
-<!-- Page Content -->
+
+    <!-- Page Content -->
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">DOCTORS
-                    <small>Quezon City</small>
+                    <small>Malabon</small>
                 </h1>
             </div>
         </div>
-                <input type="submit" class="form-control" value="Schedule an appointment" style="width:200px;" /><br/>
+        <a href="<?php echo base_url('index.php/evencal')?>" class="form-control" style="width:200px;">Schedule an appointment</a>
 
         <!-- Related Projects Row -->
         <div class="row table-responsive"" style="background-color: rgba(255,255,255,0.4); ">

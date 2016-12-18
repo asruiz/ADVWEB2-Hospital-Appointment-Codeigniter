@@ -22,17 +22,17 @@
         <!-- Wrapper for Slides -->
         <div class="carousel-inner">
           <div class="item active">
-            <div class="fill" style="background-image:url('../../assets/portfolio/images/2.jpg');"></div>
+            <div class="fill" style="background-image: url(assets/images/header.jpg)"></div>
             <div class="carousel-caption">
               <!--<h2>Caption 1</h2>-->
             </div>
           </div>
           <div class="item">
-            <div class="fill" style="background-image:url('../../assets/portfolio/images/01.jpg');"></div>
+            <div class="fill" style="background-image:url('assets/images/full-slider/1.jpg');"></div>
             <div class="carousel-caption"></div>
           </div>
           <div class="item">
-            <div class="fill" style="background-image:url('../../assets/portfolio/images/3.jpg');"></div>
+            <div class="fill" style="background-image:url('assets/images/full-slider/3.jpg');"></div>
             <div class="carousel-caption"></div>
           </div>
         </div>

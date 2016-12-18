@@ -20,14 +20,14 @@ class signup extends CI_Controller
     $this->form_validation->set_rules('fname', 'First Name', 'trim|required|alpha|min_length[3]|max_length[30]|xss_clean');
     $this->form_validation->set_rules('lname', 'Last Name', 'trim|required|alpha|min_length[3]|max_length[30]|xss_clean');
     $this->form_validation->set_rules('email', 'Email ID', 'trim|required|valid_email|is_unique[user.email]|xss_clean');
-    $this->form_validation->set_rules('password', 'Password', 'required|md5|trim|xss_clean');
+    $this->form_validation->set_rules('password', 'Password', 'required|md5|trim|min_length[8]|max_length[30]|xss_clean');
     $this->form_validation->set_rules('cpassword', 'Confirm Password', 'required|matches[password]|md5|trim|xss_clean');
 
     // submit
     if ($this->form_validation->run() == FALSE)
     {
       // fails
-      $this->load->view('registration_view');
+      $this->load->view('register/registration_view');
     }
     else
     {

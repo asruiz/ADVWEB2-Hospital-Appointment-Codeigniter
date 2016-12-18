@@ -19,6 +19,7 @@
                <li class="hidden">
                     <a href="#page-top"></a>
                 </li>
+
                 <li>
                   <?php if ($this->session->userdata('login')){ ?>
                     <li><a>Hello <?php echo $this->session->userdata('uname'); ?></a></li>
@@ -28,9 +29,13 @@
                     <li><a>Hello <?php echo $this->session->userdata('uname'); ?></a></li>
                     <li><a href="<?php echo base_url(); ?>index.php/profile_doc">Profile</a></li>
                   <?php } ?>
+                   <li><a href="<?php echo base_url(); ?>index.php/home/help">Help</a></li>
                   <li><a href="<?php echo base_url(); ?>index.php/first/logout">Log Out</a></li>
                 </li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+
+<br/>
+<br/>

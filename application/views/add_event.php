@@ -22,34 +22,6 @@
 		</tr>
 
 		<tr>
-			<td>Doctor <span class="require">*</span></td>
-			<td>:</td>
-			<td><input type="text" name="event" id="event" maxlength="50" size="30" /></td>
-		</tr>
-
-		<tr>
-			<td>Doctor <span class="require">*</span></td>
-			<td>:</td>
-			<td>
-				<select class="form-control">
-					<tbody>
-					<?php
-					 foreach ($h->result() as $row)
-					 {
-							?>
-							<td><?php echo '<option value="'.$row->fname.'">'.$row->fname.'</option>' ?>
-
-					 <?php } ?>
-            <?php
-            // foreach($groups as $row)
-            // {
-            //   echo '<option value="'.$row->fname.'">'.$row->fname.'</option>';
-            // }
-            ?>
-            </select>
-			</td>
-
-		<tr>
 			<td>Event <span class="require">*</span></td>
 			<td>:</td>
 			<td><input type="text" name="event" id="event" maxlength="50" size="30" /></td>

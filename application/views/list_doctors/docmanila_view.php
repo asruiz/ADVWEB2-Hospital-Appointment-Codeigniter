@@ -9,7 +9,7 @@
                 </h1>
             </div>
         </div>
-        <a href="<?php echo base_url('index.php/showdoc/appointment')?>" class="form-control" style="width:200px; text-decoration: none;">Schedule an appointment</a><br/>
+        <a href="<?php echo base_url('index.php/evencal')?>" class="form-control" style="width:200px;">Schedule an appointment</a>
         <!--<input type="butt" class="form-control" value="Schedule an appointment" style="width:200px;" /><br/>-->
         <!-- Related Projects Row -->
         <div class="row table-responsive"" style="background-color: rgba(255,255,255,0.4); ">
